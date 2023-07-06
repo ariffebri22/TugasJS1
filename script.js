@@ -39,28 +39,41 @@ var biodata = {
 
 //Soal 2
 const averageGrade = (mtk, bInd, bIng, ipa) => {
-    const average = (mtk + bInd + bIng + ipa) / 4;
-    let grade;
-
-    if (average >= 90) {
-        grade = "A";
-    } else if (average >= 80) {
-        grade = "B";
-    } else if (average >= 70) {
-        grade = "C";
-    } else if (average >= 60) {
-        grade = "D";
-    } else {
-        grade = "E";
+    if (!mtk || !bInd || !bIng || !ipa) {
+        return console.log("Semua nilai harus diisi!");
     }
 
-    console.log(`Rata-rata = ${average}`);
-    console.log(`Grade = ${grade}`);
+    if (typeof mtk !== "number" || typeof bInd !== "number" || typeof bIng !== "number" || typeof ipa !== "number") {
+        console.log("Masukan nilai dengan benar!");
+    } else {
+        const average = (mtk + bInd + bIng + ipa) / 4;
+        let grade = "";
 
-    return average;
+        if (average >= 90) {
+            grade = "A";
+        } else if (average >= 80) {
+            grade = "B";
+        } else if (average >= 70) {
+            grade = "C";
+        } else if (average >= 60) {
+            grade = "D";
+        } else {
+            grade = "E";
+        }
+
+        console.log(`Rata-rata = ${average}`);
+        console.log(`Grade = ${grade}`);
+
+        return average;
+    }
 };
 
-averageGrade(90, 82, 76, 65);
+const matematika = 89;
+const bahasaIndonesia = 82;
+const bahasaInggris = 76;
+const ipa = 98;
+
+// averageGrade(matematika, bahasaIndonesia, bahasaInggris, ipa);
 
 //Soal 3
 const invertedTriangle = (num) => {
@@ -79,7 +92,7 @@ const invertedTriangle = (num) => {
     }
 };
 
-console.log(invertedTriangle(6));
+// console.log(invertedTriangle(6));
 
 //Soal 4
 let data = {
@@ -105,12 +118,12 @@ let newData = {
     hobby: "Memancing",
 };
 
-console.log(newData);
+// console.log(newData);
 
 //B
 let {
     address: { street, city },
 } = data;
 
-console.log(`street : ${street}`);
-console.log(`city : ${city}`);
+// console.log(`street : ${street}`);
+// console.log(`city : ${city}`);
