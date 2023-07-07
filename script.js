@@ -1,7 +1,7 @@
 //Soal 1
 var biodata = {
     name: "Arif Febriansyah",
-    age: 22,
+    age: 23,
     hobbies: ["ngoding", "joging", "gaming"],
     isMarried: false,
     schoolList: [
@@ -73,7 +73,7 @@ const bahasaIndonesia = 82;
 const bahasaInggris = 76;
 const ipa = 98;
 
-// averageGrade(matematika, bahasaIndonesia, bahasaInggris, ipa);
+averageGrade(matematika, bahasaIndonesia, bahasaInggris, ipa);
 
 //Soal 3
 const invertedTriangle = (num) => {
@@ -92,7 +92,7 @@ const invertedTriangle = (num) => {
     }
 };
 
-// console.log(invertedTriangle(6));
+console.log(invertedTriangle(6));
 
 //Soal 4
 let data = {
